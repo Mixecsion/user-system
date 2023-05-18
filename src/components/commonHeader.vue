@@ -3,7 +3,7 @@
     <div class="r-content">
       <el-dropdown trigger="click" size="small">
         <span>
-          <img class="user" :src="userImg" />
+          <img class="user" :src=userImg />
         </span>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item @click="this.$router.push('login')" index="/login"
@@ -20,6 +20,7 @@ export default{
     name:"CommonHeader",
     data(){
         return{
+          userImg: require('../assets/充电站.png')
         }
     },
     methods:{
@@ -30,7 +31,7 @@ export default{
 header {
   display: flex;
   height: 100%;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 .r-content {

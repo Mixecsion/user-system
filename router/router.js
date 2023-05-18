@@ -13,7 +13,12 @@ const routes= [
         path:'/queue',
         name:'queue',
         component:()=>import('../views/Queue.vue')
-    }
+    },
+    {
+        path:'/login',
+        name:'login',
+        component:()=>import('../views/Login.vue')
+    },
    
 ]
 

@@ -7,7 +7,7 @@
       label-width="100px"
       class="login-container"
     >
-      <h3 class="login-title">系统登录</h3>
+      <h3 class="login-title">注册</h3>
       <el-form-item
         label="账号"
         label-width="80px"
@@ -34,23 +34,13 @@
           placeholder="请输入密码"
         ></el-input>
       </el-form-item>
-      <el-form-item class="submit">
-        <el-row>
-          <el-col :span="8">
-              <el-button
-            type="success"
-            class="login-submit"
-            @click="login()"
-            >登录</el-button>
-          </el-col>
-          <el-col :span="8">
-              <el-button
-            type="success"
-            class="signin-submit"
-            @click="signin()"
-            >注册</el-button>
-          </el-col>
-        </el-row>
+      <el-form-item class="login-submit">
+        <el-button
+          type="primary"
+          class="login-submit"
+          @click="login()"
+          >注册</el-button
+        >
       </el-form-item>
     </el-form>
   </div>
@@ -92,9 +82,6 @@ export default {
           if((this.form.username=='2020211211')&&(this.form.password=='12345678')){
             this.$router.push('/')
           }
-      },
-      signin(){
-            this.$router.push('/')
       }
   },
 };
@@ -116,18 +103,10 @@ export default {
   text-align: center;
   color: #505458;
 }
-.login-submit{
-  margin: 10px auto 0px auto;
-}
 .login-submit {
   display: inline-block;
-  width: 70px;
-  margin: 10px auto 10px auto;
-}
-.signin-submit {
-  display: inline-block;
-  width: 70px;
-  margin: 10px auto 10px auto;
+  width: 150px;
+  margin: 10px auto 0px auto;
 }
 .background {
   display: inline-block;

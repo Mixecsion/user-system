@@ -8,19 +8,70 @@
         <common-header></common-header>
       </el-header>
       <el-main>
-        <el-row span="8" style="margin-top: 20px" :gutter="20" z-index:2>
-          <el-col :span="8">
-            <el-card shadow="hover">
-              <div class="userinfo">
-                <p class="name">姓名：<span>李华</span></p>
-                <p class="number">学号: 2020211211</p>
-                <p class="college">学院：计算机学院（国家示范性软件学院）</p>
-                <p class="college">班级: 2020211301</p>
-                <el-divider></el-divider>
-              </div>
-            </el-card>
-          </el-col>
-        </el-row>
+        <el-table
+          :data="tableData"
+          border
+          style="width: 100%">
+          <el-table-column
+            fixed
+            prop="note1"
+            label="详单编号"
+            width="150">
+          </el-table-column>
+          <el-table-column
+            prop="time"
+            label="生成时间"
+            width="150">
+          </el-table-column>
+          <el-table-column
+            prop="note2"
+            label="充电桩编号"
+            width="120">
+          </el-table-column>
+          <el-table-column
+            prop=""
+            label="充电电量"
+            width="120">
+          </el-table-column>
+          <el-table-column
+            prop="all-time"
+            label="充电时长"
+            width="120">
+          </el-table-column>
+          <el-table-column
+            prop="start-time"
+            label="启动时间"
+            width="150">
+          </el-table-column>
+          <el-table-column
+            prop="end-time"
+            label="停止时间"
+            width="150">
+          </el-table-column>
+          <el-table-column
+            prop="address"
+            label="充电费用"
+            width="150">
+          </el-table-column>
+          <el-table-column
+            prop="address"
+            label="服务费用"
+            width="150">
+          </el-table-column>
+          <el-table-column
+            prop="address"
+            label="总费用"
+            width="150">
+          </el-table-column>
+          <el-table-column
+            fixed="right"
+            label="操作"
+            width="100">
+            <template slot-scope="scope">
+              <el-button @click="handleClick(scope.row)" type="text" size="small">缴费</el-button>
+            </template>
+          </el-table-column>
+        </el-table>
       </el-main>
     </el-container>
   </el-container>

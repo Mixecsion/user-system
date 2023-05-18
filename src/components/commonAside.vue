@@ -4,21 +4,21 @@
     :router="true"
     :default-active="this.$route.path"
     class="el-menu-vertical-demo"
-    background-color="#545c64"
+    background-color=" #65b465"
     text-color="#FFFFFF"
-    active-text-color="#80ffff"
+    active-text-color="#326732"
     @open="handleOpen"
     @close="handleClose"
     :collapse="isCollapse"
   >
-    <h3>充电系统管理中心</h3>
+    <h3>充电预约系统</h3>
     <el-menu-item @click="navigation('/')" index="/">
-      <i class="el-icon-odometer"></i>
+      <i class="el-icon-odometer" color ="#FFFFFF"></i>
       <span slot="title">充电预约</span>
     </el-menu-item>
     <el-menu-item @click="navigation('/queue')" index="/queue">
       <i class="el-icon-postcard"></i>
-      <span slot="title">队列管理</span>
+      <span slot="title">详单查询</span>
     </el-menu-item>
   </el-menu>
 </template>
